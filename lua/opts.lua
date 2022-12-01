@@ -6,7 +6,7 @@ local cmd = vim.cmd
 opt.colorcolumn = '80'           -- str:  Show col for max line length
 opt.number = true                -- bool: Show line numbers
 opt.relativenumber = true        -- bool: Show relative line numbers
-opt.scrolloff = 4                -- int:  Min num lines of context
+opt.scrolloff = 12               -- int:  Min num lines of context
 opt.signcolumn = "yes"           -- str:  Show the sign column
 
 -- [[ Filetypes ]]
@@ -37,3 +37,23 @@ opt.splitbelow = true            -- bool: Place new window below the current one
 opt.syntax = "ON"                -- str:  Allow syntax highlighting
 opt.termguicolors = true         -- bool: If term supports ui color then enable
 vim.cmd([[colorscheme gruvbox]]) -- cmd:  Set the colorscheme
+
+-- Set completeopt to have a better completion experience
+-- :help completeopt
+-- menuone: popup even when there's only one match
+-- noinsert: Do not insert text until a selection is made
+-- noselect: Do not select, force to select one from the menu
+-- shortness: avoid showing extra messages when using completion
+-- updatetime: set updatetime for CursorHold
+vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
+vim.opt.shortmess = vim.opt.shortmess + { c = true}
+vim.api.nvim_set_option('updatetime', 300) 
+
+-- Fixed column for diagnostics to appear
+-- Show autodiagnostic popup on cursor hover_range
+-- Goto previous / next diagnostic warning / error 
+-- Show inlay_hints more frequently 
+vim.cmd([[
+set signcolumn=yes
+autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+]])
