@@ -6,11 +6,16 @@
 vim.g.mapleader = " "
 vim.g.localleader = " "
 
+-- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- IMPORTS
 require('vars')      -- Variables
 require('keys')      -- Keymaps
 require('opts')      -- Options
 require('plug')      -- Plugins
+require('lsp')
 
 -- PLUGINS --
 require('nvim-tree').setup {}
@@ -20,3 +25,7 @@ require('lualine').setup {
     }
 }
 require('nvim-autopairs').setup {}
+require('mason').setup {}
+require('mason-lspconfig').setup {}
+
+

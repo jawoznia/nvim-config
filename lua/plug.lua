@@ -34,5 +34,15 @@ return require('packer').startup(function(use)
   -- Coding
   use { 'windwp/nvim-autopairs' }                    -- auto close brackets, etc.
 
+  -- LSP
+use 'williamboman/mason.nvim'    
+  use 'williamboman/mason-lspconfig.nvim'
+
+  use 'neovim/nvim-lspconfig'
+  use 'simrat39/rust-tools.nvim'
+
+-- Debugging
+use 'nvim-lua/plenary.nvim'
+use 'mfussenegger/nvim-dap'
 end)
 
