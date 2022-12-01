@@ -1,5 +1,6 @@
 --[[ opts.lua ]]
 local opt = vim.opt
+local cmd = vim.cmd
 
 -- [[ Context ]]
 opt.colorcolumn = '80'           -- str:  Show col for max line length
@@ -31,3 +32,8 @@ opt.tabstop = 4                  -- num:  Number of spaces tabs count for
 -- [[ Splits ]]
 opt.splitright = true            -- bool: Place new window to right of current one
 opt.splitbelow = true            -- bool: Place new window below the current one
+
+-- [[ Theme ]]
+opt.syntax = "ON"                -- str:  Allow syntax highlighting
+opt.termguicolors = true         -- bool: If term supports ui color then enable
+vim.cmd([[colorscheme gruvbox]]) -- cmd:  Set the colorscheme
