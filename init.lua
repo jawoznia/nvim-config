@@ -19,3 +19,4 @@ require('lualine').setup {
         theme = 'gruvbox_dark'
     }
 }
+require('nvim-autopairs').setup {}
