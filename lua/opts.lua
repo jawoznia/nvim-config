@@ -9,6 +9,9 @@ opt.relativenumber = true        -- bool: Show relative line numbers
 opt.scrolloff = 12               -- int:  Min num lines of context
 opt.signcolumn = "yes"           -- str:  Show the sign column
 
+-- [[ Clipboard ]]
+opt.clipboard = 'unnamedplus'    -- str:  Attach global clipboard to nvim
+
 -- [[ Filetypes ]]
 opt.encoding = 'utf8'            -- str:  String encoding to use
 opt.fileencoding = 'utf8'        -- str:  File encoding to use
@@ -18,7 +21,7 @@ opt.syntax = "ON"                -- str:  Allow syntax highlighting
 opt.termguicolors = true         -- bool: If term supports ui color then enable
 
 -- [[ Search ]]
-opt.ignorecase = true 		 -- bool: Ignore case in search patterns
+opt.ignorecase = true 		     -- bool: Ignore case in search patterns
 opt.smartcase = true             -- bool: Override ignorecase if search contains capitals
 opt.incsearch = true             -- bool: Use incremental search
 opt.hlsearch = false             -- bool: Highlight search matches
