@@ -60,5 +60,8 @@ use 'mfussenegger/nvim-dap'
     use 'hrsh7th/vim-vsnip'    
 
 use 'nvim-treesitter/nvim-treesitter'
+
+    -- Speed improvement
+    use 'lewis6991/impatient.nvim'
 end)
 
