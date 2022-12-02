@@ -12,3 +12,8 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 --map('n', 'ff', [[:Telescope find_files]], {})
+
+-- Copy to clipboard
+vim.keymap.set('n', '<c-c>', '"*y :let @+=@*<CR>', {noremap=true, silent=true})
+vim.keymap.set("n", "<c-v>", '"+p', {noremap=true, silent=true})
+
