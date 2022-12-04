@@ -6,9 +6,6 @@
 vim.g.mapleader = " "
 vim.g.localleader = " "
 
--- Disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 vim.g.noswapfile = 1
 
 -- IMPORTS
@@ -16,11 +13,16 @@ require("vars") -- Variables
 require("keys") -- Keymaps
 require("opts") -- Options
 require("plug") -- Plugins
-require("lsp")
 require("nullls")
+require('lsp-config.language-servers')
+require("lsp")
 
 -- PLUGINS --
-require("nvim-tree").setup({})
+require("nvim-tree").setup{
+    diagnostics = {
+        enable = true,
+    }
+}
 require("lualine").setup({
 	options = {
 		theme = "gruvbox_dark",

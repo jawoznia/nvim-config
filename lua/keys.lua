@@ -1,9 +1,10 @@
 --[[ keys.lua ]]
 local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true}
 
 -- remap the key usedto leave insert mode
 -- map('i', 'jk', '', {})
-map("n", "n", [[:NvimTreeToggle]], {})
+map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 
 -- Telescope config
 local builtin = require("telescope.builtin")

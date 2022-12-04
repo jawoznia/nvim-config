@@ -36,8 +36,8 @@ return require("packer").startup(function(use)
 	-- LSP
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
-
 	use("neovim/nvim-lspconfig")
+
 	use("simrat39/rust-tools.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 
