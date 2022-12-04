@@ -16,6 +16,7 @@ require("plug") -- Plugins
 require("nullls")
 require('lsp-config.language-servers')
 require("lsp")
+require('lsp-config/cmp-config')
 
 -- PLUGINS --
 require("nvim-tree").setup{
