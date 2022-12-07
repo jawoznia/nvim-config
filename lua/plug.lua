@@ -40,6 +40,14 @@ return require("packer").startup(function(use)
 
     use("simrat39/rust-tools.nvim")
     use("jose-elias-alvarez/null-ls.nvim")
+    use({
+        "saecki/crates.nvim",
+        tag = "v0.3.0",
+        requires = { "nvim-lua/plenary.nvim" },
+        config = function()
+            require("crates").setup()
+        end,
+    })
 
     -- Debugging
     use("nvim-lua/plenary.nvim")
