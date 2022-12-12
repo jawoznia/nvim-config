@@ -12,8 +12,3 @@ map("n", "<leader>ff", builtin.find_files, {})
 map("n", "<leader>fg", builtin.live_grep, {})
 map("n", "<leader>fb", builtin.buffers, {})
 map("n", "<leader>fh", builtin.help_tags, {})
---map('n', 'ff', [[:Telescope find_files]], {})
-
--- Copy to clipboard
-map("n", "<c-c>", '"*y :let @+=@*<CR>', { noremap = true, silent = true })
-map("n", "<c-v>", '"+p', { noremap = true, silent = true })

@@ -82,4 +82,7 @@ return require("packer").startup(function(use)
             })
         end,
     })
+
+    -- Fancy notifications
+    use("rcarriga/nvim-notify")
 end)

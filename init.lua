@@ -33,3 +33,5 @@ require("lualine").setup({
 require("nvim-autopairs").setup({})
 
 require("impatient")
+
+vim.notify = require("notify")
