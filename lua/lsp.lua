@@ -19,6 +19,8 @@ rt.setup({
             vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
             -- Code action groups
             vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+            -- Expand macro
+            vim.keymap.set("n", "<Leader>le", rt.expand_macro.expand_macro, { buffer = bufnr })
             -- Enable completion triggered by <c-x><c-o>
             vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 

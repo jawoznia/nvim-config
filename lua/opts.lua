@@ -37,6 +37,11 @@ opt.tabstop = 4 -- num:  Number of spaces tabs count for
 opt.splitright = true -- bool: Place new window to right of current one
 opt.splitbelow = true -- bool: Place new window below the current one
 
+-- [[ Swp files]]
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
+
 -- Set completeopt to have a better completion experience
 -- :help completeopt
 -- menuone: popup even when there's only one match

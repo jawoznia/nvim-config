@@ -65,3 +65,22 @@ require("lspconfig")["taplo"].setup({
     on_attach = on_attach,
     flags = lsp_flags,
 })
+require("lspconfig")["rust_analyzer"].setup({
+    on_attach = on_attach,
+    flags = lsp_flags,
+    -- Server-specific settings...
+    settings = {
+        ["rust-analyzer"] = {
+            --            imports = { granularity = { group = "module" }, prefix = "self" },
+            assist = { importGranularity = "module" },
+            cargo = { loadOutDirsFromCheck = true },
+            procMacro = { enable = true },
+            checkOnSave = {
+                AllTargets = true,
+                AllFeatures = true,
+                command = "clippy",
+            },
+            hover = { linksInHover = false },
+        },
+    },
+})
