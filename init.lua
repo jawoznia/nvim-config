@@ -5,13 +5,13 @@ require("user/vars") -- Variables
 require("user/keys") -- Keymaps
 require("user/opts") -- Options
 require("user/colorscheme") -- Options
+require("user/cmp") -- completion
 
 -- Plugins specific
 require("plug") -- Plugins
 require("nullls")
 require("lsp-config.language-servers")
 require("lsp")
-require("lsp-config/cmp-config")
 require("lsp-config/treesitter-config")
 
 require("nvim-tree").setup({

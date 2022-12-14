@@ -82,6 +82,20 @@ return packer.startup(function(use)
 
     use("simrat39/rust-tools.nvim")
     use("jose-elias-alvarez/null-ls.nvim")
+    use("nvim-treesitter/nvim-treesitter")
+
+    -- Debugging
+    use("mfussenegger/nvim-dap")
+
+    -- Useful completion sources:
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-nvim-lua")
+    use("hrsh7th/cmp-nvim-lsp-signature-help")
+    use("hrsh7th/cmp-path")
+    use("hrsh7th/cmp-cmdline")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/vim-vsnip")
     use({
         "saecki/crates.nvim",
         tag = "v0.3.0",
@@ -91,24 +105,9 @@ return packer.startup(function(use)
         end,
     })
 
-    -- Debugging
-    use("mfussenegger/nvim-dap")
-
-    -- Completion framework:
-    use("hrsh7th/nvim-cmp")
-
-    -- LSP completion source:
-    use("hrsh7th/cmp-nvim-lsp")
-
-    -- Useful completion sources:
-    use("hrsh7th/cmp-nvim-lua")
-    use("hrsh7th/cmp-nvim-lsp-signature-help")
-    use("hrsh7th/cmp-vsnip")
-    use("hrsh7th/cmp-path")
-    use("hrsh7th/cmp-buffer")
-    use("hrsh7th/vim-vsnip")
-
-    use("nvim-treesitter/nvim-treesitter")
+    -- snippets
+    use("L3MON4D3/LuaSnip")
+    use("rafamadriz/friendly-snippets")
 
     -- Speed improvement
     use("lewis6991/impatient.nvim")

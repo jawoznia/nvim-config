@@ -71,7 +71,6 @@ require("lspconfig")["rust_analyzer"].setup({
     -- Server-specific settings...
     settings = {
         ["rust-analyzer"] = {
-            --            imports = { granularity = { group = "module" }, prefix = "self" },
             assist = { importGranularity = "module" },
             cargo = { loadOutDirsFromCheck = true },
             procMacro = { enable = true },
