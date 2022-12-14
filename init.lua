@@ -1,11 +1,5 @@
 --[[ init.lua ]]
 
--- LEADER
--- These keybindings need to be defined before the first /
--- is called; otherwise, it will default to "\"
-vim.g.mapleader = " "
-vim.g.localleader = " "
-
 -- User section
 require("user/vars") -- Variables
 require("user/keys") -- Keymaps
