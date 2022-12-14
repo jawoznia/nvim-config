@@ -6,10 +6,12 @@
 vim.g.mapleader = " "
 vim.g.localleader = " "
 
--- IMPORTS
-require("vars") -- Variables
-require("keys") -- Keymaps
-require("opts") -- Options
+-- User section
+require("user/vars") -- Variables
+require("user/keys") -- Keymaps
+require("user/opts") -- Options
+
+-- Plugins specific
 require("plug") -- Plugins
 require("nullls")
 require("lsp-config.language-servers")
@@ -17,7 +19,6 @@ require("lsp")
 require("lsp-config/cmp-config")
 require("lsp-config/treesitter-config")
 
--- PLUGINS --
 require("nvim-tree").setup({
     diagnostics = {
         enable = true,
