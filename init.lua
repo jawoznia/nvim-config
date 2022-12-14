@@ -6,8 +6,6 @@
 vim.g.mapleader = " "
 vim.g.localleader = " "
 
-vim.g.noswapfile = 1
-
 -- IMPORTS
 require("vars") -- Variables
 require("keys") -- Keymaps

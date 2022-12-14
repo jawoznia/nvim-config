@@ -73,16 +73,18 @@ return require("packer").startup(function(use)
     use("lewis6991/impatient.nvim")
 
     -- Utils
-    use({
-        "Pocco81/auto-save.nvim",
-        config = function()
-            require("auto-save").setup({
-                -- your config goes here
-                -- or just leave it empty :)
-            })
-        end,
-    })
+    --    use({
+    --        "Pocco81/auto-save.nvim",
+    --        config = function()
+    --            require("auto-save").setup({
+    --                -- your config goes here
+    --                -- or just leave it empty :)
+    --                trigger_events = { "InsertLeave" }, -- trigger_events = {"InsertLeave", "TextChanged"},
+    --            })
+    --        end,
+    --    })
 
     -- Fancy notifications
+
     use("rcarriga/nvim-notify")
 end)
