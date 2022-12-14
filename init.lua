@@ -4,6 +4,7 @@
 require("user/vars") -- Variables
 require("user/keys") -- Keymaps
 require("user/opts") -- Options
+require("user/colorscheme") -- Options
 
 -- Plugins specific
 require("plug") -- Plugins
