@@ -1,12 +1,14 @@
 --[[ opts.lua ]]
 local opt = vim.opt
 local cmd = vim.cmd
+local api = vim.api
 
 -- [[ Context ]]
 opt.colorcolumn = "100" -- str:  Show col for max line length
 opt.number = true -- bool: Show line numbers
 opt.relativenumber = true -- bool: Show relative line numbers
 opt.scrolloff = 12 -- int:  Min num lines of context
+opt.sidescrolloff = 12
 opt.signcolumn = "yes" -- str:  Show the sign column
 
 -- [[ Clipboard ]]
@@ -38,9 +40,12 @@ opt.splitright = true -- bool: Place new window to right of current one
 opt.splitbelow = true -- bool: Place new window below the current one
 
 -- [[ Swp files]]
-vim.opt.backup = false
-vim.opt.writebackup = false
-vim.opt.swapfile = false
+opt.backup = false
+opt.writebackup = false
+opt.swapfile = false
+
+-- So that `` is visible in markdown files
+vim.opt.conceallevel = 0
 
 -- Set completeopt to have a better completion experience
 -- :help completeopt
@@ -49,15 +54,15 @@ vim.opt.swapfile = false
 -- noselect: Do not select, force to select one from the menu
 -- shortness: avoid showing extra messages when using completion
 -- updatetime: set updatetime for CursorHold
-vim.opt.completeopt = { "menuone", "noselect", "noinsert" }
-vim.opt.shortmess = vim.opt.shortmess + { c = true }
-vim.api.nvim_set_option("updatetime", 300)
+opt.completeopt = { "menuone", "noselect", "noinsert" }
+opt.shortmess = vim.opt.shortmess + { c = true }
+opt.updatetime = 300
 
 -- Fixed column for diagnostics to appear
 -- Show autodiagnostic popup on cursor hover_range
 -- Goto previous / next diagnostic warning / error
 -- Show inlay_hints more frequently
-vim.cmd([[
+cmd([[
 set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
