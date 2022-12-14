@@ -33,3 +33,4 @@ require("nvim-autopairs").setup({})
 require("impatient")
 
 vim.notify = require("notify")
+require("plugins/nvim-comment-config")
