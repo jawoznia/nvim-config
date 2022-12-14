@@ -1,12 +1,22 @@
-local null_ls = require("null-ls")
+local null_ls_status_ok, null_ls = pcall(require, "null-ls")
+if not null_ls_status_ok then
+    return
+end
+
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
+local formatting = null_ls.builtins.formatting
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
+local diagnostics = null_ls.builtins.diagnostics
+
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
     sources = {
-        null_ls.builtins.formatting.rustfmt,
-        null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.taplo,
-        null_ls.builtins.formatting.mdformat,
+        formatting.rustfmt,
+        formatting.stylua,
+        formatting.taplo,
+        formatting.mdformat,
+        diagnostics.luacheck,
     },
 
     -- you can reuse a shared lspconfig on_attach callback here
