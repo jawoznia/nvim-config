@@ -9,13 +9,13 @@ require("user/cmp") -- completion
 require("user/lsp") -- lsp
 require("user/gitsigns") -- git support
 require("user/telescope")
+require("user/treesitter")
 
 -- Plugins specific
 require("plug") -- Plugins
 --require("nullls")
 -- require("lsp-config.language-servers")
 -- require("lsp")
-require("lsp-config/treesitter-config")
 
 require("nvim-tree").setup({
 	diagnostics = {

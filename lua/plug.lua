@@ -80,7 +80,10 @@ return packer.startup(function(use)
 
 	use("simrat39/rust-tools.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
+
+	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use("p00f/nvim-ts-rainbow")
 
 	-- Debugging
 	use("mfussenegger/nvim-dap")
