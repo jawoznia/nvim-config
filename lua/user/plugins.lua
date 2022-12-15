@@ -21,7 +21,7 @@ end
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plug.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -41,12 +41,14 @@ packer.init({
 })
 
 return packer.startup(function(use)
-	-- [[ Plugins, Go Here ]]
-
-	-- [[ Utils ]]
-	use("wbthomason/packer.nvim")
-	use("nvim-lua/popup.nvim")
-	use("nvim-lua/plenary.nvim")
+	-- [[ General plugins ]]
+	use("wbthomason/packer.nvim") -- package manager
+	use("nvim-lua/popup.nvim") -- better popup windows
+	use("nvim-lua/plenary.nvim") -- no idea
+	-- use("folke/which-key.nvim") -- cool floaty window with keybindings
+	use("windwp/nvim-autopairs") -- auto close brackets, etc.
+	use("lewis6991/impatient.nvim") -- nvim speed improvement
+	use("akinsho/toggleterm.nvim") -- terminal in nvim
 
 	-- [[ Theme ]]
 	use({ "mhinz/vim-startify" }) -- start screen
@@ -62,9 +64,6 @@ return packer.startup(function(use)
 	-- [[ Telescope ]]
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
-
-	-- [[ Autopairing brackets ]]
-	use({ "windwp/nvim-autopairs" }) -- auto close brackets, etc.
 
 	-- [[ LSP ]]
 	use("neovim/nvim-lspconfig")
@@ -102,18 +101,12 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip")
 	use("rafamadriz/friendly-snippets")
 
-	-- [[ Speed improvement ]]
-	use("lewis6991/impatient.nvim")
-
 	-- [[ Fancy notifications ]]
 	use("rcarriga/nvim-notify")
 	use("terrortylor/nvim-comment")
 
 	-- [[ git ]]
 	use("lewis6991/gitsigns.nvim")
-
-	-- [[ Terminal ]]
-	use("akinsho/toggleterm.nvim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
