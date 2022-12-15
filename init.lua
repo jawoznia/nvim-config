@@ -10,6 +10,7 @@ require("user/lsp") -- lsp
 require("user/gitsigns") -- git support
 require("user/telescope")
 require("user/treesitter")
+require("user/autopairs")
 
 -- Plugins specific
 require("plug") -- Plugins
@@ -27,7 +28,6 @@ require("lualine").setup({
 		theme = "gruvbox_dark",
 	},
 })
-require("nvim-autopairs").setup({})
 
 require("impatient")
 
