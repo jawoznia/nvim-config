@@ -43,7 +43,7 @@ packer.init({
 return packer.startup(function(use)
 	-- [[ Plugins, Go Here ]]
 
-	-- Packer can manage itself
+	-- [[ Utils ]]
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
@@ -51,40 +51,36 @@ return packer.startup(function(use)
 	-- [[ Theme ]]
 	use({ "mhinz/vim-startify" }) -- start screen
 	use({ "DanilaMihailov/beacon.nvim" }) -- cursor jump
-	use({
-		"nvim-lualine/lualine.nvim", -- statusline
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
+	use({ "nvim-lualine/lualine.nvim" }) -- statusline
 	use({ "ellisonleao/gruvbox.nvim" }) -- theme
 	use({ "Yggdroot/indentLine" }) -- see indentation
 
-	-- tree manager
+	-- [[ File explorer ]]
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 
-	-- Telescope
+	-- [[ Telescope ]]
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
 
-	-- Coding
+	-- [[ Autopairing brackets ]]
 	use({ "windwp/nvim-autopairs" }) -- auto close brackets, etc.
 
-	-- LSP
+	-- [[ LSP ]]
 	use("neovim/nvim-lspconfig")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
-
 	use("simrat39/rust-tools.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 
-	-- Treesitter
+	-- [[ Treesitter ]]
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("p00f/nvim-ts-rainbow")
 
-	-- Debugging
+	-- [[ Debugging ]]
 	use("mfussenegger/nvim-dap")
 
-	-- Useful completion sources:
+	-- [[ Cmp ]]
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-nvim-lua")
@@ -102,19 +98,22 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- snippets
+	-- [[ Snippets ]]
 	use("L3MON4D3/LuaSnip")
 	use("rafamadriz/friendly-snippets")
 
-	-- Speed improvement
+	-- [[ Speed improvement ]]
 	use("lewis6991/impatient.nvim")
 
-	-- Fancy notifications
+	-- [[ Fancy notifications ]]
 	use("rcarriga/nvim-notify")
 	use("terrortylor/nvim-comment")
 
-	-- git support
+	-- [[ git ]]
 	use("lewis6991/gitsigns.nvim")
+
+	-- [[ Terminal ]]
+	use("akinsho/toggleterm.nvim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
