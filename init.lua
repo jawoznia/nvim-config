@@ -11,6 +11,7 @@ require("user/gitsigns") -- git support
 require("user/telescope")
 require("user/treesitter")
 require("user/autopairs")
+require("user/nvim-comment")
 
 -- Plugins specific
 require("plug") -- Plugins
@@ -32,4 +33,3 @@ require("lualine").setup({
 require("impatient")
 
 vim.notify = require("notify")
-require("plugins/nvim-comment-config")
