@@ -16,7 +16,6 @@ require("user/nvim-comment") -- line/range commenting
 require("user/nvim-tree") -- file explorer
 require("user/lualine") -- bottom line with multiple infos
 require("user/toggleterm") -- terminal in nvim
-
-require("impatient")
+require("user/impatient")
 
 vim.notify = require("notify")
