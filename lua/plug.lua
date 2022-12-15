@@ -66,19 +66,17 @@ return packer.startup(function(use)
 		},
 	})
 
-	-- Telescope --
-	use({
-		"nvim-telescope/telescope.nvim", -- fuzzy finder
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
+	-- Telescope
+	use("nvim-telescope/telescope.nvim")
+	use("nvim-telescope/telescope-media-files.nvim")
 
 	-- Coding
 	use({ "windwp/nvim-autopairs" }) -- auto close brackets, etc.
 
 	-- LSP
+	use("neovim/nvim-lspconfig")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
-	use("neovim/nvim-lspconfig")
 
 	use("simrat39/rust-tools.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")

@@ -8,6 +8,7 @@ require("user/colorscheme") -- Options
 require("user/cmp") -- completion
 require("user/lsp") -- lsp
 require("user/gitsigns") -- git support
+require("user/telescope")
 
 -- Plugins specific
 require("plug") -- Plugins
