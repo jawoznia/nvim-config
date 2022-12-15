@@ -49,6 +49,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- auto close brackets, etc.
 	use("lewis6991/impatient.nvim") -- nvim speed improvement
 	use("akinsho/toggleterm.nvim") -- terminal in nvim
+	use("ahmedkhalf/project.nvim")
 
 	-- [[ Theme ]]
 	use({ "mhinz/vim-startify" }) -- start screen

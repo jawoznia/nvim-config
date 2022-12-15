@@ -54,5 +54,12 @@ map("n", "<leader>fg", builtin.live_grep, {})
 map("n", "<leader>fb", builtin.buffers, {})
 map("n", "<leader>fh", builtin.help_tags, {})
 
+-- Terminal --
+-- Better terminal navigation
+-- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+-- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+-- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+-- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
 -- Toggle nvim tree
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
