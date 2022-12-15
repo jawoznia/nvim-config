@@ -4,27 +4,17 @@
 require("user/vars") -- Variables
 require("user/keys") -- Keymaps
 require("user/opts") -- Options
+require("user/plugins") -- plugins list
 require("user/colorscheme") -- Options
 require("user/cmp") -- completion
 require("user/lsp") -- lsp
 require("user/gitsigns") -- git support
-require("user/telescope")
-require("user/treesitter")
-require("user/autopairs")
-require("user/nvim-comment")
-require("user/nvim-tree")
-
--- Plugins specific
-require("plug") -- Plugins
---require("nullls")
--- require("lsp-config.language-servers")
--- require("lsp")
-
-require("lualine").setup({
-	options = {
-		theme = "gruvbox_dark",
-	},
-})
+require("user/telescope") -- search engine
+require("user/treesitter") -- syntax highlighting
+require("user/autopairs") -- autopairs
+require("user/nvim-comment") -- line/range commenting
+require("user/nvim-tree") -- file explorer
+require("user/lualine") -- bottom line with multiple infos
 
 require("impatient")
 
