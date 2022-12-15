@@ -12,6 +12,7 @@ require("user/telescope")
 require("user/treesitter")
 require("user/autopairs")
 require("user/nvim-comment")
+require("user/nvim-tree")
 
 -- Plugins specific
 require("plug") -- Plugins
@@ -19,11 +20,6 @@ require("plug") -- Plugins
 -- require("lsp-config.language-servers")
 -- require("lsp")
 
-require("nvim-tree").setup({
-	diagnostics = {
-		enable = true,
-	},
-})
 require("lualine").setup({
 	options = {
 		theme = "gruvbox_dark",

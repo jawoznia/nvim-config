@@ -32,9 +32,6 @@ map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 map("n", "<S-l>", ":bnext<CR>", opts)
 map("n", "<S-h>", ":bprevious<CR>", opts)
 
--- Toggle nvim tree
-map("n", "<leader>nt", ":NvimTreeToggle<CR>", opts)
-
 -- Visual --
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
@@ -56,3 +53,6 @@ map("n", "<leader>ff", builtin.find_files, {})
 map("n", "<leader>fg", builtin.live_grep, {})
 map("n", "<leader>fb", builtin.buffers, {})
 map("n", "<leader>fh", builtin.help_tags, {})
+
+-- Toggle nvim tree
+map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)

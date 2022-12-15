@@ -59,12 +59,8 @@ return packer.startup(function(use)
 	use({ "Yggdroot/indentLine" }) -- see indentation
 
 	-- tree manager
-	use({
-		"nvim-tree/nvim-tree.lua",
-		requires = {
-			"nvim-tree/nvim-web-devicons", -- optional, for file icons
-		},
-	})
+	use("kyazdani42/nvim-web-devicons")
+	use("kyazdani42/nvim-tree.lua")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
