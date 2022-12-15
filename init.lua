@@ -6,7 +6,8 @@ require("user/keys") -- Keymaps
 require("user/opts") -- Options
 require("user/colorscheme") -- Options
 require("user/cmp") -- completion
-require("user/lsp") -- lsp config
+require("user/lsp") -- lsp
+require("user/gitsigns") -- git support
 
 -- Plugins specific
 require("plug") -- Plugins
