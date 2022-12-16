@@ -18,6 +18,7 @@ require("user/lualine") -- bottom line with multiple infos
 require("user/toggleterm") -- terminal in nvim
 require("user/impatient")
 require("user/project")
+require("user/nvim-transparent")
 -- require("user/whichkey")
 
 vim.notify = require("notify")
