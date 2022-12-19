@@ -7,6 +7,9 @@ map("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.localleader = " "
 
+-- Disable recording --
+map("", "q", "<Nop>")
+
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
