@@ -1,4 +1,4 @@
-# Dotfiles
+# NVIM-config
 
 Nvim configuration for rust development.
 
