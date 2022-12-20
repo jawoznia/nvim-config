@@ -6,7 +6,7 @@ local cmd = vim.cmd
 opt.colorcolumn = "100" -- str:  Show col for max line length
 opt.number = true -- bool: Show line numbers
 opt.relativenumber = true -- bool: Show relative line numbers
-opt.scrolloff = 12 -- int:  Min num lines of context
+opt.scrolloff = 999 -- int:  Min num lines of context
 opt.sidescrolloff = 12
 opt.signcolumn = "yes" -- str:  Show the sign column
 
