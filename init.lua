@@ -19,6 +19,7 @@ require("user/toggleterm") -- terminal in nvim
 require("user/impatient")
 require("user/project")
 require("user/nvim-transparent")
+require("user/notify")
 -- require("user/whichkey")
 
-vim.notify = require("notify")
+-- vim.notify = require("notify")
