@@ -17,7 +17,7 @@ rt.setup({
 			local bufopts = { noremap = true, silent = true, buffer = bufnr }
 			--            vim.keymap.set("n", "gd", vim.lsp.buf.declaration, bufopts)
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
-			vim.keymap.set("n", "k", vim.lsp.buf.hover, bufopts)
+			vim.keymap.set("n", "lk", vim.lsp.buf.hover, bufopts)
 			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
 			vim.keymap.set("n", "<c-k>", vim.lsp.buf.signature_help, bufopts)
 			vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, bufopts)
