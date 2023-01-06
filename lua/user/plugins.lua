@@ -71,7 +71,10 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
-	use("simrat39/rust-tools.nvim")
+	-- TODO: Remove once this fix will be delivered to simrat39 branch.
+	-- Temporary fix for inlay hints error
+	use("kdarkhan/rust-tools.nvim")
+	-- use("simrat39/rust-tools.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 
 	-- [[ Treesitter ]]
